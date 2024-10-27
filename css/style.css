@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Layout */
+body,
+ul,
+li,
+a,
+form,
+input {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+#mySidebar {
+    position: relative;
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    float: left;
+}
+
+.sidebar-item {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+    background-color: #555;
+}
+
+.sidebar-item.active {
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+}
+
+#main {
+    position: relative;
+    padding: 20px;
+    margin-left: 20%;
+    width: 80%;
+    z-index: 1;
+}
+
+.content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+
+/* Header */
+.header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand-container {
+    flex-basis: 20%;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+
+.header-form {
+    flex-basis: 35%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+/* Notifications & Profile */
+/* General Styles */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Notifications Section */
+.notifications {
+    position: relative;
+    z-index: 10;
+    /* Ensures dropdown is above other elements */
+}
+
+.notifications-toggle {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.notifications-toggle i {
+    font-size: 22px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.notifications-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    list-style-type: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    font-size: 14px;
+    z-index: 1000;
+    /* High z-index to appear on top of main content */
+}
+
+.notifications-menu li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.notifications-menu li:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.notifications:hover .notifications-menu {
+    display: block;
+}
+
+/* Profile Section */
+
+.profile-toggle i {
+    font-size: 20px;
+    color: #333;
+}
