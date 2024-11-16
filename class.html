@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/class.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -55,9 +56,112 @@
         <a href="data_library.html" class="sidebar-item">Data Library</a>
     </div>
     <div id="main">
-        <h1>CLASS</h1>
+        <form style="padding: 20px 0px;">
+            <div style="margin-bottom: 10px;">
+                <label for="search"><b>Tìm kiếm lớp học</b></label>
+            </div>
+            <input class="search-class" type="text" placeholder="Điền tên lớp" name="search" required>
+            <button class="searchclick button-create" type="submit">Find</button>
+        </form>
+        <div class="header-list">
+            <h1>Danh sách lớp</h1>
+            <div class="button-group">
+                <button class="button-create" id="createClassBtn">Tạo lớp học</button>
+                <button class="button-list">Tạo lớp cho khóa mới</button>
+                <button class="button-list">Đánh số báo danh</button>
+                <button class="dropdown button-list">
+                    Bộ lọc
+                    <div class="dropdown-content">
+                        <a href="#">Tất cả</a>
+                        <a href="#">Lớp của tôi</a>
+                        <a href="#">Lớp được chia sẻ</a>
+                    </div>
+                </button>
+            </div>
+
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Lớp</th>
+                    <th>Sĩ Số</th>
+                    <th>Năm Học</th>
+                    <th>Hành Động</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Lớp 10A</td>
+                    <td>45</td>
+                    <td>2023-2024</td>
+                    <td>
+                        <button class="btn"><a href="student.html"
+                                style="text-decoration: none; color: black;">Xem</a></button>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Lớp 11B</td>
+                    <td>50</td>
+                    <td>2022-2023</td>
+                    <td>
+                        <button class="btn"><a href="#" style="text-decoration: none; color: black;">Xem</a></button>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Xóa</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Lớp 12C</td>
+                    <td>40</td>
+                    <td>2021-2022</td>
+                    <td>
+                        <button class="btn"><a href="#" style="text-decoration: none; color: black;">Xem</a></button>
+                        <button class="btn edit">Edit</button>
+                        <button class="btn delete">Xóa</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
+    <div id="classModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-header">Tạo Lớp Mới</div>
+            <div class="modal-body">
+                <label for="className">Tên Lớp:</label>
+                <input type="text" id="className" placeholder="Nhập tên lớp">
+
+                <label for="academicYear">Năm Học:</label>
+                <input type="text" id="academicYear" placeholder="VD: 2023-2024">
+
+                <label for="grade">Khối:</label>
+                <select id="grade">
+                    <option value="1">Khối 1</option>
+                    <option value="2">Khối 2</option>
+                    <option value="3">Khối 3</option>
+                    <option value="4">Khối 4</option>
+                    <option value="5">Khối 5</option>
+                    <option value="6">Khối 6</option>
+                    <option value="7">Khối 7</option>
+                    <option value="8">Khối 8</option>
+                    <option value="9">Khối 9</option>
+                    <option value="10">Khối 10</option>
+                    <option value="11">Khối 11</option>
+                    <option value="12">Khối 12</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" id="saveClassBtn">Lưu</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/class.js"></script>
 </body>
 
 </html>
