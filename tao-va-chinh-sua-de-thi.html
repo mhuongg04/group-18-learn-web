@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo và chỉnh sửa đề thi</title>
+    <link rel="stylesheet" href="assets/css-dethi/style.css">
+    <script src="https://kit.fontawesome.com/48f262b35c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="inner-wrap">
+                <a href="index.html" class="inner-logo">Learning Website</a>
+                <form class="inner-form">
+                    <input type="text" name="search" placeholder="Search">
+                </form>
+                <div class="inner-notifications">
+                    <div class="notifications">
+                        <a href="#" class="notifications-toggle">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="notification-dot"></span>
+                        </a>
+                        <ul class="notifications-menu">
+                            <li>Notifications</li>
+                            <li>Your account has been created successfully - 12 days ago</li>
+                            <li>Check daily report - 10 days ago</li>
+                            <li>Account verification failed - 1 hour ago</li>
+                        </ul>
+                    </div>
+                    <a href="profile.html" class="profile-toggle"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Section 1 -->
+    <section class="section">
+        <div class="container">
+            <div class="inner-wrap">
+                <!-- Phần bên trái -->
+                <div class="inner-left">
+                    <a href="index.html" class="inner-left-item">Home</a>
+                    <a href="class.html" class="inner-left-item">Class</a>
+                    <a href="assignment.html" class="inner-left-item">Assignment</a>
+                    <a href="test.html" class="inner-left-item">Test</a>
+                    <a href="data_library.html" class="inner-left-item">Data Library</a>
+                    <a href="quan-ly-giao-vien.html" class="inner-left-item">Teacher</a>
+                    <a href="tao-va-chinh-sua-de-thi.html" class="inner-left-item active">Exam</a>
+                </div>
+                <!-- Phần bên phải -->
+                <div class="inner-right">
+                    <div class="inner-right-wap">
+                        <h1>Đề thi mới</h1>
+                        <div class="form-group">
+                            <label for="question">Câu hỏi:</label>
+                            <textarea id="question" placeholder="Nhập câu hỏi..." rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Đáp án:</label>
+                            <div id="answersContainer">
+                                <div class="answer-item">
+                                    <input type="text" class="answer" placeholder="Nhập đáp án...">
+                                </div>
+                            </div>
+                            <button id="addAnswerBtn" class="add-answer-btn">+ Thêm Đáp Án</button>
+                        </div>
+                        <button id="addQuestionBtn">Thêm Câu Hỏi</button>
+
+                        <h2>Danh Sách Câu Hỏi</h2>
+                        <div id="questionList"></div>
+                    </div>
+
+                </div>
+
+    </section>
+    <!-- End Section 1 -->
+    <script src="assets/js-dethi/script.js"></script>
+</body>
+
+</html>

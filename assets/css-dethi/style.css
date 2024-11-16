@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* End Container */
+
+/* Header */
+.header {
+    z-index: 9999999999999;
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+
+}
+
+.header .inner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .inner-logo {
+    font-size: 24px;
+    color: #333;
+}
+
+.inner-form {
+    margin: 0;
+    padding: 0;
+    flex-basis: 35%;
+}
+
+.header input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.header .inner-notifications {
+    display: flex;
+    gap: 15px;
+}
+
+.profile-toggle i {
+    font-size: 20px;
+    color: #333;
+}
+
+.notification-dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8px;
+    height: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.notifications-toggle {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.notifications-toggle i {
+    font-size: 22px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.notifications {
+    position: relative;
+    z-index: 10;
+    /* Ensures dropdown is above other elements */
+}
+
+.notifications-menu li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.notifications-menu {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    list-style-type: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    font-size: 14px;
+    z-index: 1000;
+    /* High z-index to appear on top of main content */
+}
+
+.notifications-menu li:first-child {
+    font-weight: bold;
+    color: #333;
+}
+
+.notifications:hover ul {
+    display: block;
+}
+
+/* End Header */
+
+/* Section-1 */
+.inner-left {
+    position: fixed;
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    height: 100vh;
+    float: left;
+}
+
+.inner-left-item {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.inner-left-item:hover {
+    background-color: #555;
+}
+
+.inner-left-item.active {
+    font-weight: bold;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Bên phải */
+.inner-right {
+    margin-left: calc(20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-right-wap {
+    width: 80%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea,
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#questionList {
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.question-item {
+    background: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    position: relative;
+}
+
+.question-item button {
+    position: absolute;
+    right: 2px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-size: 14px;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.question-item button:hover {
+    background: #e53935;
+}
+  
+.answer-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.add-answer-btn {
+    background: #2196F3;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    /* margin-top: 20px; */
+}
+
+.add-answer-btn:hover {
+    background: #1976D2;
+}
+.remove-answer-btn{
+    width: 10%;
+}
+/* End Bên phải */
+
+/* End Section-1 */
