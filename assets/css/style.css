@@ -116,7 +116,7 @@ ul{
 
 /* Section-1 */
 .inner-left {
-    position: relative;
+    position: fixed;
     width: 20%;
     background-color: #333;
     color: white;
@@ -141,7 +141,7 @@ ul{
 }
 /* Bên phải */
 .inner-right {
-    width: 100%;
+    margin-left: calc(20%);
 }
 .title{
     display: flex;
