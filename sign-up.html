@@ -17,8 +17,8 @@
         </div>
 
         <div class="navbar-right">
-            <button class="sign-button"><a class="a-sign-button" href="sign-in.html">Log In</a></button>
-            <button class="sign-button"><a class="a-sign-button" href="sign-up.html">Sign up</a></button>
+            <button class="sign-button" onclick="window.location.href='sign-in.html'">Log In</button>
+            <button class="sign-button" onclick="window.location.href='sign-up.html'">Sign up</button>
         </div>
     </header>
 
@@ -35,7 +35,7 @@
                 <input type="text" placeholder="Enter your full name" name="fullname" required>
 
                 <label for="psw"><b>Date of Birth</b></label>
-                <input type="date" name="dob" required>
+                <input type="date" name="dob" required style="padding: 5px; margin: 10px;">
 
                 <button class="login-click" type="submit" onclick="window.location.href='index.html'">Sign up</button>
                 <label>
@@ -44,12 +44,9 @@
             </div>
 
             <div class="container" style="background-color:#f1f1f1">
-                <span class="psw">
-                    <a href="">Forgot password?</a>
-                </span>
-                <span class="account-signup">
-                    <a href="sign-up.html">
-                        Don't have an account?
+                <span class="account-signin">
+                    <a href="sign-in.html">
+                        Already have an account?
                     </a>
                 </span>
             </div>
