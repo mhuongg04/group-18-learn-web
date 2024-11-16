@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý giáo viên</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/48f262b35c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="inner-wrap">
+                <a href="index.html" class="inner-logo">Learning Website</a>
+                <form class="inner-form">
+                    <input type="text" name="search" placeholder="Search">
+                </form>
+                <div class="inner-notifications">
+                    <div class="notifications">
+                        <a href="#" class="notifications-toggle">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="notification-dot"></span>
+                        </a>
+                        <ul class="notifications-menu">
+                            <li>Notifications</li>
+                            <li>Your account has been created successfully - 12 days ago</li>
+                            <li>Check daily report - 10 days ago</li>
+                            <li>Account verification failed - 1 hour ago</li>
+                        </ul>
+                    </div>
+                    <a href="profile.html" class="profile-toggle"><i class="fa-solid fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Section 1 -->
+    <section class="section">
+        <div class="container">
+            <div class="inner-wrap">
+                <!-- Phần bên trái -->
+                <div class="inner-left">
+                    <a href="index.html" class="inner-left-item">Home</a>
+                    <a href="class.html" class="inner-left-item">Class</a>
+                    <a href="assignment.html" class="inner-left-item">Assignment</a>
+                    <a href="test.html" class="inner-left-item">Test</a>
+                    <a href="data_library.html" class="inner-left-item">Data Library</a>
+                    <a href="quan-ly-giao-vien.html" class="inner-left-item active">Teacher</a>
+                </div>
+                <!-- Phần bên phải -->
+                <div class="inner-right">
+                    <div class="title">
+                        <div class="title-main">Danh sách giáo viên và nhóm giáo viên</div>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Tìm kiếm tên, phone và email">
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i>Icon tìm kiếm -->
+                        <span class="add-icon" onclick="toggleAddOptions()">
+
+                            <button><i class="fa-solid fa-plus"></i></button>
+                        </span>
+                        <div class="add-options" id="addOptions">
+                            <div onclick="showPopup('teacher')">Thêm giáo viên</div>
+                            <div onclick="showPopup('teacherGroup')">Thêm nhóm giáo viên</div>
+                        </div>
+                    </div>
+
+                    <div id="emptyMessage">
+                        <p>Chưa có nhóm hoặc giáo viên nào! Vui lòng tạo thêm.</p>
+                    </div>
+
+                    <ul id="teacherList">
+                        <!-- Danh sách giáo viên và nhóm giáo viên sẽ được hiển thị ở đây -->
+                    </ul>
+                    <!-- Popup thêm giáo viên -->
+                    <div id="teacherPopup" class="popup">
+                        <div class="popup-content">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <h3>Thêm giáo viên</h3>
+                            <input type="text" id="teacherName" placeholder="Nhập tên giáo viên">
+                            <input type="text" id="teacherContact" placeholder="Số điện thoại hoặc email">
+                            <button onclick="saveTeacher()">Lưu</button>
+                        </div>
+                    </div>
+
+                    <!-- Popup thêm nhóm giáo viên -->
+                    <div id="groupPopup" class="popup">
+                        <div class="popup-content">
+                            <span class="close" onclick="closePopup()">&times;</span>
+                            <h3>Thêm nhóm giáo viên</h3>
+                            <input type="text" id="groupName" placeholder="Nhập tên nhóm giáo viên">
+                            <button onclick="saveGroup()">Lưu</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nút Lưu sẽ được hiển thị khi có giáo viên hoặc nhóm giáo viên được thêm vào -->
+                <div id="saveButtonContainer" style="display: none; text-align: center; margin-top: 20px;">
+                    <button id="saveButton" onclick="saveAll()">Lưu thông tin</button>
+                </div>
+
+    </section>
+    <!-- End Section 1 -->
+     <script src = "assets/js/script.js"></script>
+</body>
+
+</html>
