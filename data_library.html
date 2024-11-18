@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Library</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/data.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -56,9 +57,56 @@
         <a href="data_library.html" class="sidebar-item  active">Data Library</a>
     </div>
     <div id="main">
-        <h1>DATA LIBRARY</h1>
+        <h1>Danh sách đề thi</h1>
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTests('all')">Tất cả</button>
+            <button class="tab-button" onclick="showTests('1')">Khối 1</button>
+            <button class="tab-button" onclick="showTests('2')">Khối 2</button>
+            <button class="tab-button" onclick="showTests('3')">Khối 3</button>
+            <button class="tab-button" onclick="showTests('4')">Khối 4</button>
+            <button class="tab-button" onclick="showTests('5')">Khối 5</button>
+            <button class="tab-button" onclick="showTests('6')">Khối 6</button>
+            <button class="tab-button" onclick="showTests('7')">Khối 7</button>
+            <button class="tab-button" onclick="showTests('8')">Khối 8</button>
+            <button class="tab-button" onclick="showTests('9')">Khối 9</button>
+            <button class="tab-button" onclick="showTests('10')">Khối 10</button>
+            <button class="tab-button" onclick="showTests('11')">Khối 11</button>
+            <button class="tab-button" onclick="showTests('12')">Khối 12</button>
     </div>
 
+    <!-- Vùng hiển thị danh sách đề thi -->
+<div id="testContent" class="test-content">
+    <h2 id="testTitle">Tất cả các đề thi</h2>
+    <ul id="testList">
+        <!-- Danh sách các đề thi sẽ được hiển thị ở đây -->
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên đề thi</th>
+                <th>Người tạo</th>
+                <th>Năm Học</th>
+                <th>Xem nội dung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Đề KTGK1 môn Toán</td>
+                <td>Nguyễn Thị Lan</td>
+                <td>2023-2024</td>
+                <td>
+                    NULL
+                </td>
+            </tr>
+        </tbody>
+    </table>    
+    </ul>
+</div>
+
+    <script src="./js/data.js"></script>
 
 </body>
 
