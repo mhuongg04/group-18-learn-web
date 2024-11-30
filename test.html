@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css-dethi/style.css">
     <script src="https://kit.fontawesome.com/48f262b35c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
-    <header class="header sticky-top">
-        <div class="navbar-brand-container">
-            <a class="navbar-brand" href="index.html">
-                Learning Website
-            </a>
-        </div>
-
-
-        <form class="header-form" action="#" method="get" role="form">
-            <input class="search-input" name="search" type="text" placeholder="Search" aria-label="Search">
-        </form>
-
-        <div class="navbar-right">
-            <div class="notifications">
-                <a href="#" class="notifications-toggle">
-                    <i class="fa-solid fa-envelope"></i>
-                    <span class="notification-dot"></span>
-                </a>
-                <ul class="dropdown-menu notifications-menu">
-                    <li>Notifications</li>
-                    <li>Your account has been created successfully - 12 days ago</li>
-                    <li>Check daily report - 10 days ago</li>
-                    <li>Account verification failed - 1 hour ago</li>
-                </ul>
-            </div>
-
-            <div class="profile-button">
-                <a href="profile.html" class="profile-toggle">
-                    <i class="fa-solid fa-user"></i>
-                </a>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="inner-wrap">
+                <a href="index.html" class="inner-logo">Learning Website</a>
+                <div class="inner-notifications">
+                    <div class="notifications">
+                        <a href="#" class="notifications-toggle">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span class="notification-dot"></span>
+                        </a>
+                        <ul class="notifications-menu">
+                            <li>Notifications</li>
+                            <li>Your account has been created successfully - 12 days ago</li>
+                            <li>Check daily report - 10 days ago</li>
+                            <li>Account verification failed - 1 hour ago</li>
+                        </ul>
+                    </div>
+                    <a href="profile.html" class="profile-toggle"><i class="fa-solid fa-user"></i></a>
+                </div>
             </div>
         </div>
     </header>
-    <div id="mySidebar" class="sidebar">
-        <a href="index.html" class="sidebar-item">Home</a>
-        <a href="class.html" class="sidebar-item">Class</a>
-        <a href="assignment.html" class="sidebar-item">Assignment</a>
-        <a href="test.html" class="sidebar-item active">Test</a>
-        <a href="data_library.html" class="sidebar-item">Data Library</a>
-    </div>
-    <div id="main">
 
-        <h1>TEST</h1>
-    </div>
+    <!-- End Header -->
 
-
-
+    <!-- Section 1 -->
+    <section class="section">
+        <div class="container">
+            <div class="inner-wrap">
+                <!-- Phần bên trái -->
+                <div class="inner-left">
+                    <a href="index.html" class="inner-left-item">Home</a>
+                    <a href="class.html" class="inner-left-item">Class</a>
+                    <a href="assignment.html" class="inner-left-item">Assignment</a>
+                    <a href="test.html" class="inner-left-item active" >Test</a>
+                    <a href="data_library.html" class="inner-left-item">Data Library</a>
+                </div>
+                <!-- Phần bên phải -->
+                 <div class="inner-right">
+                        <div class="quiz-form" id="quizForm">
+                            <h1>Đề thi</h1>
+                            <div class="question">
+                                <label>Câu hỏi:</label>
+                                <input class="question1" type="text" placeholder="Nhập câu hỏi">
+                                <div class="answer">
+                                    <input type="text" placeholder="Đáp án 1">
+                                    <input type="radio" name="answer">
+                                </div>
+                                <div class="answer">
+                                    <input type="text" placeholder="Đáp án 2">
+                                    <input type="radio" name="answer">
+                                </div>
+                                <div class="answer">
+                                    <input type="text" placeholder="Đáp án 3">
+                                    <input type="radio" name="answer">
+                                </div>
+                                <div class="answer">
+                                    <input type="text" placeholder="Đáp án 4">
+                                    <input type="radio" name="answer">
+                                </div>
+                            </div>
+                            <button onclick="addQuestion()">Thêm câu hỏi</button>
+                            <button onclick="saveQuiz()">Lưu đề thi</button>
+                        </div>
+    
+                        <div class="quiz-info">
+                            <label>Tên bài kiểm tra:</label>
+                            <input type="text" id="quizName" place holder="Nhập tên bài kiểm tra">
+    
+                            <label>Mã đề:</label>
+                            <input type="text" id = "quizCode" placeholder="Nhập mã đề">
+    
+                            <label>Tổng số câu hỏi</label>
+                            <input type="text" id ="totalQuestions" readonly>
+                        </div>
+                     </div>
+    </section>
+    <!-- End Section 1 -->
+    <script src="js/test.js"></script>
 </body>
-
 </html>
